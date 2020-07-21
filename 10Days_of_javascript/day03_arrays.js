@@ -30,6 +30,7 @@ function getSecondLargest(nums) {
             secondLargestValue = currentNum;
         }
     }
+    // console.log(secondLargestValue);
     return secondLargestValue;
 }
 getSecondLargest([2, 3, 6, 6, 5]);
