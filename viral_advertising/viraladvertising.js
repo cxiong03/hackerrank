@@ -14,4 +14,4 @@ function viralAdvertising(days) {
 
   return totalLikes;
 }
-console.log(viralAdvertising(4));
+console.log(viralAdvertising(5));
