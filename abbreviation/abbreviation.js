@@ -3,22 +3,37 @@ function abbreviation(a, b) {
   arrayA = a.split("");
   arrayB = b.split("");
   for (i = 0; i < arrayA.length; i++) {
-    if (arrayA[i] != arrayB[i]) {
+    if (arrayA.length < arrayB.length) {
+      return "NO";
+    }
+    if (arrayB[i] != arrayA[i]) {
       arrayA.splice(i, 1);
+      i--;
     }
   }
   //   console.log(arrayA);
   //   console.log(arrayB);
-  arrayB.join("");
-  arrayA.join("");
-  console.log(arrayB.toString());
-  if (arrayA === arrayB) {
+  var strA = arrayB.join("");
+  var strB = arrayA.join("");
+  console.log(strB);
+  console.log(strA);
+  //console.log(arrayA);
+  //console.log(arrayB);
+  if (arrayA.toString() == arrayB.toString()) {
     return "Yes";
   }
   return "No";
   //   arrayB.toString(arrayA);
 }
-abbreviation(
-  "ELEDhEOXIAZQYWOPQIUSSGDCXOHSeYCKSCOYEMEDTGWPlJRZFILHZOBAVMFXdnxn",
-  "ELEDEOXIAZQYWOPQIUSSGDCXOHSYCKSCOYEMEDTGWPJRZFILHZOBAVMFX"
+console.log(
+  abbreviation(
+    "ELEDhEOXIAZQYWOPQIUSSGDCXOHSeYCKSCOYEMEDTGWPlJRZFILHZOBAVMFXdnxn",
+    "ELEDEOXIAZQYWOPQIUSSGDCXOHSYCKSCOYEMEDTGWPJRZFILHZOBAVMFX"
+  )
+);
+console.log(
+  abbreviation(
+    "ELEDhEOXIAZQYWOPQIUSVMFXdnxn",
+    "ELEDEOXIAZQYWOPQIUSSGDCXOHSYCKSCOYEMEDTGWPJRZFILHZOBAVMFX"
+  )
 );
