@@ -13,10 +13,10 @@ function abbreviation(a, b) {
   }
   //   console.log(arrayA);
   //   console.log(arrayB);
-  var strA = arrayB.join("");
-  var strB = arrayA.join("");
-  console.log(strB);
-  console.log(strA);
+  //   var strA = arrayB.join("");
+  //   var strB = arrayA.join("");
+  //   console.log(strB);
+  //   console.log(strA);
   //console.log(arrayA);
   //console.log(arrayB);
   if (arrayA.toString() == arrayB.toString()) {
