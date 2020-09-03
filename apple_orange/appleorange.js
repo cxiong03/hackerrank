@@ -25,3 +25,32 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 }
 
 countApplesAndOranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4]);
+
+////////////
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+  const startOfHouse = s;
+  const endOfHouse = t;
+  const locationOfAppleTree = a;
+  const locationOfOrangeTree = b;
+  const locationOfAppleDrops = apples.slice();
+  const locationOfOrangeDrops = oranges.slice();
+  let applesThatAreClose = 0;
+  let orangesThatAreClose = 0;
+
+  for (var i = 0; i < locationOfAppleDrops.length; i++) {
+    let distance = locationOfAppleTree + locationOfAppleDrops[i];
+    if (distance >= startOfHouse && distance <= endOfHouse) {
+      applesThatAreClose++;
+    }
+  }
+
+  for (var i = 0; i < locationOfOrangeDrops.length; i++) {
+    let distance = locationOfOrangeTree + locationOfOrangeDrops[i];
+    if (distance >= startOfHouse && distance <= endOfHouse) {
+      orangesThatAreClose++;
+    }
+  }
+
+  console.log(applesThatAreClose);
+  console.log(orangesThatAreClose);
+}
